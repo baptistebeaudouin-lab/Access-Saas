@@ -1,0 +1,57 @@
+/*
+ * Tokens du design system « A11Y Check ».
+ * Source de vérité : fichier Figma eZ0AtUbBVOEB5Q76qjSDMh, collections Couleurs, Dimensions et Typographie.
+ * Les noms reprennent la syntaxe de code (WEB) déclarée sur chaque variable Figma.
+ */
+@theme {
+  --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Fonds, textes, bordures */
+  --color-background: #ffffff;
+  --color-foreground: #0d0f12;
+  --color-card: #ffffff;
+  --color-muted: #f4f5f7;
+  --color-muted-foreground: #565b63;
+  --color-subtle: #f3f8f6;
+  --color-border: #e4e6ea;
+  /* Bordure des éléments interactifs — 3.2:1 sur blanc (RGAA 3.3). */
+  --color-border-interactive: #8c939e;
+
+  /* Marque : vert (principale) et corail (accent) */
+  --color-primary: #0f3d33;
+  --color-primary-foreground: #ffffff;
+  /* Corail texte — 4.8:1 sur blanc. */
+  --color-accent: #c94530;
+  /* Corail anneau de focus — 3.45:1 sur blanc (RGAA 10.7). */
+  --color-focus: #e85d45;
+
+  /* Statuts — toujours icône + intitulé + couleur */
+  --color-ok: #0f7a45;
+  --color-ok-surface: #e8f5ec;
+  --color-warn: #9a5b00;
+  --color-warn-surface: #fbf1de;
+  --color-error: #c02626;
+  --color-error-surface: #fceaea;
+  --color-neutral: #565b63;
+  --color-neutral-surface: #f0f1f3;
+
+  /* Criticité des constats */
+  --color-crit-bloquant: #c0201f;
+  --color-crit-bloquant-surface: #fceaea;
+  --color-crit-majeur: #a1520a;
+  --color-crit-majeur-surface: #fbeada;
+  --color-crit-mineur: #7a6510;
+  --color-crit-mineur-surface: #f6f0d3;
+
+  /* Rayons (Figma : radius/focus, chip, control, container, card, checkbox) */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-checkbox: 5px;
+
+  /* Ombres (Figma : Ombre/Carte survol, Ombre/Pastille) */
+  --shadow-card-hover: 0 12px 40px -24px rgb(0 0 0 / 0.4);
+}

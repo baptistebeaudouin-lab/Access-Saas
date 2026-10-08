@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+@import './styles/tokens.css';
+
+html {
+  font-family: var(--font-sans);
+  color: var(--color-foreground);
+  background: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-accent) 22%, transparent);
+}
+
+/* Focus visible sur tous les éléments focusables — ne repose pas sur la couleur seule (RGAA 10.7). */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Masquage accessible : hors écran mais focusable et lu par les lecteurs d'écran. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Barres de défilement visibles en permanence (repère de défilement). */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-interactive) transparent;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-interactive);
+  border-radius: 8px;
+  border: 2px solid var(--color-background);
+}
+
+@keyframes a11y-fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.a11y-fade {
+  animation: a11y-fade 0.35s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .a11y-fade {
+    animation: none;
+  }
+}
+
+/* Export PDF : masque la navigation et les commandes. */
+@media print {
+  header, [role="tablist"], .print\:hidden { display: none !important; }
+  .a11y-fade { animation: none; }
+}

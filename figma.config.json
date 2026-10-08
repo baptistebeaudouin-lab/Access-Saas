@@ -1,0 +1,10 @@
+{
+  "codeConnect": {
+    "include": ["figma/**/*.figma.ts"],
+    "label": "React",
+    "language": "tsx",
+    "documentUrlSubstitutions": {
+      "<DS>": "https://www.figma.com/design/eZ0AtUbBVOEB5Q76qjSDMh/B2B-Accessibility-Testing-Tool-%E2%80%94-Design-System"
+    }
+  }
+}
